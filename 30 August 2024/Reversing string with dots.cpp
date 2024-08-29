@@ -6,6 +6,7 @@ S = pqr.mno
 Output: mno.pqr 
 */
 
+//TC - O(N), SC - O(N)
 class Solution
 {
     public:
