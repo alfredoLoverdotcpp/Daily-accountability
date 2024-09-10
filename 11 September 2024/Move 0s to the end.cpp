@@ -27,6 +27,17 @@ public:
 };
 
 //Optimized approach:
+//The time complexity of this code is O(n) because we iterate through the array once to move all non-zero elements to the beginning of the array. 
+//The space complexity is O(1) because we are not using any extra space that grows with the input size, we are simply modifying the input array in place.
 
-.
-.
+int n = nums.size();
+
+        int nzi=0;
+        for(int i=0; i<n; ++i){
+            if(nums[i]!=0){
+                nums[nzi++]=nums[i];
+            }
+        }
+        for(int i=nzi; i<n; ++i){
+            nums[i]=0;
+        }
