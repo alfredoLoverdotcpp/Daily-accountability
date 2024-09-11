@@ -17,3 +17,21 @@ class Solution {
         return(sum-s);
     }
 };
+
+//Approach 2, XOR operation. Understanding bit manipulation
+//TC - O(N), SC - O(1)
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int allXOR = 0;
+        int n = nums.size();
+
+        for(int i=0; i<=n; ++i){
+            allXOR = allXOR^i;
+        }
+        for(int num: nums){
+            allXOR = allXOR^num;
+        }
+        return allXOR;
+    }
+};
